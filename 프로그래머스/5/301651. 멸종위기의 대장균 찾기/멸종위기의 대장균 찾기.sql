@@ -16,7 +16,4 @@ from Hierarchy h join ECOLI_DATA e on h.id=e.id
 where e.id not in (SELECT distinct(parent_Id) 
                    from ECOLI_DATA where parent_Id is not null)
 group by GENERATION
-
-
-
-
+ORDER by GENERATION
